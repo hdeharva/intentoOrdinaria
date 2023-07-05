@@ -1,0 +1,50 @@
+[
+  {
+    "name": "John Connor",
+    "email": "fernando.juanas@example.com",
+    "roles": [
+      "Member",
+      "Admin",
+      "Mamawebo"
+    ],
+    "admin": true
+  },
+  {
+    "name": "Tom Lee",
+    "email": "tom.lee@example.com",
+    "roles": [
+      "Member"
+    ],
+    "admin": false
+  },
+  {
+    "name": "Roy Fielding",
+    "email": "roy.fielding@legend.com",
+    "roles": [
+      "Member",
+      "Admin",
+      "DemiGod"
+    ],
+    "admin": true
+  },
+  {
+    "name": "Fernando Juanas",
+    "email": "fernando.juanas@example.com",
+    "roles": [
+      "Member",
+      "Admin",
+      "Mamawebo"
+    ],
+    "admin": true
+  },
+  {
+    "name": "Fernando Juanas",
+    "email": "fernando.juanas@example.com",
+    "roles": [
+      "Member",
+      "Admin",
+      "Mamawebo"
+    ],
+    "admin": true
+  }
+]

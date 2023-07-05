@@ -1,0 +1,46 @@
+CÓDIGO PARA LEER JSON QUE EMPIEZA POR {}
+
+en un datahandler.java... (Clase es una clase externa, con lo de constructor (vacío y con parámetros), getter y tostring... En el pom tiene que estar json) 
+Luego en el ejecutable hacemos Datahandler.readClase()
+
+
+CÓDIGO:
+public static void readClase(){
+
+	Gson gson = new Gson();
+
+	try {
+	
+		Clase clase = gson.fromJson(new FileReader("archivojson.json"), Clase.class);
+		System.out.println(clase);
+
+	} catch (FileNotFoundException e) {
+		throw new RuntimeException(e);
+	}
+}
+
+-------------------------------------------------------------------------------------------
+CÓDIGO PARA LEER ARRAYS EN JSON (EMPIEZAN POR [])
+
+
+Primero creamos una Clase.java con los datos necesarios, constructor VACÍO y con los 3 parámetros... Y luego un ListaClase.java con: private ArrayList<Clase> listaClase; getters y setters...
+
+En el data handler (sin usar ListaClase.java)...
+
+public static void readClase() {
+
+	Gson gson = new Gson();
+	
+	Type listaClaseType = new TypeToken<ArrayList<Clase>>(){}.getType();
+
+	try {
+		ArrayList<Clase> listaClase = gson.fromJson(new FileReader("fichero.json"), listaClaseType);
+	System.out.println(listaClase);
+
+	} catch (FileNotFoundException e) {
+		throw new RuntimeException(e);
+	}
+	
+
+
+	
